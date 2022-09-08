@@ -1,0 +1,15 @@
+package com.fastcampus.ch2;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+//원격 호출가능한 프로그램으로 등록
+@Controller
+public class Hello {
+	//2 url 과 메서드 연결
+	@RequestMapping("/hello")
+	public void main() { //static 이없어도 실행가능 : 인스턴스메서드임.
+		//인스턴스메서드는 객체생성 후 실행가능함. 중간에서 톰켓이 객체를 생성해준다는것임.
+		System.out.println("hello"); //톰켓에 실행
+	}
+}
