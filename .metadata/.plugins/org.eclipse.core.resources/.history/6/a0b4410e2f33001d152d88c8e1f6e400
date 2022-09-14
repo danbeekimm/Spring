@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<%@ page import = "java.util.Random" %>
+
+<%--클래스영역 --%>
+<%! 
+	int getRandomInt(int range){
+	return new Random().nextInt(range)+1;
+}
+%>
+
+<%--메서드영역 서비스내부 --%>
+<%! 
+	int idx1= getRandomInt(6);
+	int idx2= getRandomInt(6);
+
+%>
+<html>
+<head>
+
+<title>towDice.jsp</title>
+</head>
+<body>
+	<img src='resource/img/dice<%=idx1%>.jsp'>
+	<img src='resource/img/dice<%=idx2%>.jsp'>
+</body>
+</html>
